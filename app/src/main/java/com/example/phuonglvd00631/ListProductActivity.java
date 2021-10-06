@@ -34,7 +34,7 @@ public class ListProductActivity extends AppCompatActivity {
 
     private void getAllData() {
         products.clear();
-        Cursor cursor = App.getInstance().getDatabase().getData("SELECT * FROM Task");
+        Cursor cursor = App.getInstance().getDatabase().getData("SELECT * FROM Product");
         while (cursor.moveToNext()) {
             int id = cursor.getInt(0);
             String name = cursor.getString(1);

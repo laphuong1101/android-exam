@@ -24,10 +24,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         findViewById(R.id.btn_add).setOnClickListener(this);
         findViewById(R.id.btn_view).setOnClickListener(this);
 
-        App.getInstance().getDatabase().queryData("CREATE TABLE IF NOT EXISTS Task (" +
+        App.getInstance().getDatabase().queryData("CREATE TABLE IF NOT EXISTS Product (" +
                 "Id INTEGER PRIMARY KEY AUTOINCREMENT," +
                 "Name VARCHAR(200)," +
-                "Quantity Integer" +
+                "Quantity INTEGER" +
                 ")");
     }
 
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             String name = edtName.getText().toString();
             int quantity = Integer.parseInt(edtQuantity.getText().toString());
 
-            App.getInstance().getDatabase().queryData("INSERT INTO Task " +
+            App.getInstance().getDatabase().queryData("INSERT INTO Product " +
                     "VALUES" +
                     "(null, " +
                     "'" + name + "'," +
